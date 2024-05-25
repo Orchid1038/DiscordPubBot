@@ -1,0 +1,5 @@
+[
+  { "name": "短劍", "attack": 5 },
+  { "name": "長劍", "attack": 10 },
+  { "name": "巨斧", "attack": 15 }
+]

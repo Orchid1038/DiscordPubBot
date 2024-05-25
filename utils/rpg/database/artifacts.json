@@ -1,0 +1,6 @@
+[
+  { "name": "神秘之劍", "attack": 20, "defense": 10 },
+  { "name": "守護之盾", "defense": 20, "agility": 10 },
+  { "name": "狂暴之斧", "attack": 30, "agility": 5 },
+  { "name": "迅捷之靴", "agility": 20, "defense": 5 }
+]

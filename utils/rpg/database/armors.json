@@ -1,0 +1,5 @@
+[
+  { "name": "皮甲", "defense": 5 },
+  { "name": "鎖甲", "defense": 10 },
+  { "name": "板甲", "defense": 15 }
+]

@@ -1,0 +1,7 @@
+[
+  { "name": "服務員", "earnings": 50 },
+  { "name": "快遞員", "earnings": 60 },
+  { "name": "清潔工", "earnings": 40 },
+  { "name": "廚師", "earnings": 70 },
+  { "name": "司機", "earnings": 80 }
+]

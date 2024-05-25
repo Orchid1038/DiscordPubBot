@@ -1,0 +1,38 @@
+[
+  {
+    "name": "炎魔",
+    "level": 50,
+    "description": "來自地獄的火焰魔鬼，擁有強大的火焰攻擊能力。",
+    "story": "炎魔是地獄的守護者，擁有無窮無盡的火焰力量。傳說中，只有最勇敢的冒險者才能挑戰並擊敗它。",
+    "attack": 100,
+    "defense": 75,
+    "agility": 40,
+    "hp": 2500,
+    "creatorId": "system",
+    "creatorName": "系統"
+  },
+  {
+    "name": "冰龍",
+    "level": 60,
+    "description": "冰雪之地的統治者，擁有強大的冰凍能力。",
+    "story": "冰龍是冰雪之地的統治者，擁有強大的冰凍能力。傳說中，只有最勇敢的冒險者才能挑戰並擊敗它。",
+    "attack": 120,
+    "defense": 80,
+    "agility": 50,
+    "hp": 3000,
+    "creatorId": "system",
+    "creatorName": "系統"
+  },
+  {
+    "name": "暗影之王",
+    "level": 70,
+    "description": "黑暗世界的統治者，擁有強大的暗影力量。",
+    "story": "暗影之王是黑暗世界的統治者，擁有強大的暗影力量。傳說中，只有最勇敢的冒險者才能挑戰並擊敗它。",
+    "attack": 140,
+    "defense": 90,
+    "agility": 60,
+    "hp": 3500,
+    "creatorId": "system",
+    "creatorName": "系統"
+  }
+]

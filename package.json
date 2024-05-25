@@ -11,6 +11,7 @@
     "discord.js": "^14.15.2",
     "dotenv": "^16.4.5",
     "mathjs": "^12.4.2",
+    "moment": "^2.30.1",
     "node-schedule": "^2.1.1",
     "plotly": "^1.0.6",
     "ytdl-core": "^4.11.5"

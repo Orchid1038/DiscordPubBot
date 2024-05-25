@@ -1,0 +1,24 @@
+{
+  "recipes": [
+    {
+      "name": "魚湯",
+      "ingredients": [{ "name": "魚", "type": "fish", "quantity": 1 }],
+      "result": {
+        "name": "魚湯",
+        "type": "food",
+        "value": 50,
+        "effect": "恢復 30 HP"
+      }
+    },
+    {
+      "name": "木工工具",
+      "ingredients": [{ "name": "木材", "type": "wood", "quantity": 2 }],
+      "result": {
+        "name": "木工工具",
+        "type": "tool",
+        "value": 100,
+        "effect": "提升伐木效率"
+      }
+    }
+  ]
+}

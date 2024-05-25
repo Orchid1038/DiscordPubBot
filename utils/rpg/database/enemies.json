@@ -1,0 +1,50 @@
+[
+  {
+    "name": "史萊姆",
+    "attack": 5,
+    "defense": 3,
+    "agility": 2,
+    "hp": 20,
+    "exp": 5
+  },
+  {
+    "name": "哥布林",
+    "attack": 7,
+    "defense": 5,
+    "agility": 4,
+    "hp": 30,
+    "exp": 10
+  },
+  {
+    "name": "巨狼",
+    "attack": 10,
+    "defense": 8,
+    "agility": 6,
+    "hp": 50,
+    "exp": 20
+  },
+  {
+    "name": "骷髏戰士",
+    "attack": 8,
+    "defense": 6,
+    "agility": 5,
+    "hp": 40,
+    "exp": 15
+  },
+  {
+    "name": "火焰精靈",
+    "attack": 12,
+    "defense": 4,
+    "agility": 8,
+    "hp": 35,
+    "exp": 25
+  },
+  {
+    "name": "惡魔",
+    "attack": 15,
+    "defense": 10,
+    "agility": 7,
+    "hp": 60,
+    "exp": 30
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "name": "戰士",
+    "attack": 10,
+    "defense": 8,
+    "agility": 5,
+    "attackGrowth": 3,
+    "defenseGrowth": 3,
+    "agilityGrowth": 1,
+    "hpGrowth": 15
+  },
+  {
+    "name": "法師",
+    "attack": 12,
+    "defense": 5,
+    "agility": 7,
+    "attackGrowth": 4,
+    "defenseGrowth": 2,
+    "agilityGrowth": 2,
+    "hpGrowth": 10
+  },
+  {
+    "name": "弓箭手",
+    "attack": 8,
+    "defense": 6,
+    "agility": 10,
+    "attackGrowth": 2,
+    "defenseGrowth": 2,
+    "agilityGrowth": 3,
+    "hpGrowth": 12
+  },
+  {
+    "name": "盜賊",
+    "attack": 9,
+    "defense": 5,
+    "agility": 12,
+    "attackGrowth": 3,
+    "defenseGrowth": 2,
+    "agilityGrowth": 4,
+    "hpGrowth": 10
+  },
+  {
+    "name": "牧師",
+    "attack": 7,
+    "defense": 7,
+    "agility": 6,
+    "attackGrowth": 2,
+    "defenseGrowth": 3,
+    "agilityGrowth": 2,
+    "hpGrowth": 12
+  },
+  {
+    "name": "騎士",
+    "attack": 11,
+    "defense": 10,
+    "agility": 4,
+    "attackGrowth": 3,
+    "defenseGrowth": 4,
+    "agilityGrowth": 1,
+    "hpGrowth": 15
+  },
+  {
+    "name": "戰鬥法師",
+    "attack": 10,
+    "defense": 6,
+    "agility": 6,
+    "attackGrowth": 3,
+    "defenseGrowth": 3,
+    "agilityGrowth": 2,
+    "hpGrowth": 12
+  },
+  {
+    "name": "刺客",
+    "attack": 12,
+    "defense": 4,
+    "agility": 11,
+    "attackGrowth": 4,
+    "defenseGrowth": 2,
+    "agilityGrowth": 4,
+    "hpGrowth": 10
+  },
+  {
+    "name": "盾衛",
+    "attack": 6,
+    "defense": 12,
+    "agility": 5,
+    "attackGrowth": 2,
+    "defenseGrowth": 5,
+    "agilityGrowth": 1,
+    "hpGrowth": 15
+  },
+  {
+    "name": "獵人",
+    "attack": 9,
+    "defense": 7,
+    "agility": 9,
+    "attackGrowth": 3,
+    "defenseGrowth": 3,
+    "agilityGrowth": 3,
+    "hpGrowth": 12
+  }
+]

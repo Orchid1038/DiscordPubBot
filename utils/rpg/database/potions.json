@@ -1,0 +1,6 @@
+[
+  { "name": "低級紅藥水", "hpRestore": 20 },
+  { "name": "中級紅藥水", "hpRestore": 50 },
+  { "name": "高級紅藥水", "hpRestore": 100 },
+  { "name": "超高級紅藥水", "hpRestore": 200 }
+]
