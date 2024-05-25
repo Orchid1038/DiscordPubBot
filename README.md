@@ -11,7 +11,7 @@
 1. 克隆此存儲庫到本地:
 
 ```bash
-git clone https://github.com/your-username/discord-bot.git
+git clone https://github.com/Orchid1038/DiscordPubBot.git
 ```
 
 2. 安裝依賴項:
