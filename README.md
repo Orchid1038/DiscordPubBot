@@ -2,13 +2,12 @@
 
 這個專案是一個基於 Discord.js 的機器人,具有以下功能:
 
-- 隨機選擇早餐和晚餐選項
-- 執行簡單的數學運算
-- 與用戶進行有趣的對話互動
+- 講一些沒營養的對話
+- 精通十以內(或許更多)加減法
 
 ## 安裝
 
-1. 克隆此存儲庫到本地:
+1. clone 此存儲庫到本地:
 
 ```bash
 git clone https://github.com/Orchid1038/DiscordPubBot.git
