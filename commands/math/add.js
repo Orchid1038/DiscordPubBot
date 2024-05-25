@@ -1,21 +1,15 @@
 const { SlashCommandBuilder } = require("discord.js");
-const math = require("../utils/math");
+const math = require("../../utils/math");
 
 module.exports = {
   metadata: new SlashCommandBuilder()
     .setName("add")
-    .setDescription("Adds two numbers")
+    .setDescription("我只會這樣的加法")
     .addNumberOption((option) =>
-      option
-        .setName("num1")
-        .setDescription("The first number")
-        .setRequired(true)
+      option.setName("num1").setDescription("第一個數字").setRequired(true)
     )
     .addNumberOption((option) =>
-      option
-        .setName("num2")
-        .setDescription("The second number")
-        .setRequired(true)
+      option.setName("num2").setDescription("第二個數字").setRequired(true)
     ),
   async execute(interaction) {
     const num1 = interaction.options.getNumber("num1");

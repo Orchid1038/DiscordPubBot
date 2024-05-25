@@ -56,6 +56,7 @@ const loadCommands = (dirPath) => {
     // 檢查指令是否包含必要的屬性
     if (command.metadata && typeof command.metadata.name === "string") {
       client.commands.set(command.metadata.name, command);
+      console.log(`讀取到指令：${command.metadata.name}`); // 列印指令名稱
     } else {
       console.log(
         `[警告] 檔案 ${fileName} 中的指令缺少 metadata 或 name 屬性。`
