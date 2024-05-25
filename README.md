@@ -120,6 +120,7 @@ node bot.js
 - `weapons.json`：武器數據。
 - `wood.json`：木材數據。
 
+```plaintext
 DiscordPubBot/
 ├── commands/
 │ ├── function/
@@ -192,6 +193,7 @@ DiscordPubBot/
 ├── package-lock.json：NPM 鎖定文件。
 ├── package.json：NPM 配置文件。
 └── README.md：專案說明文件。
+```
 
 ## 簡單使用示例
 
