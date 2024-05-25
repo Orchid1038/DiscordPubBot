@@ -1,12 +1,19 @@
 {
   "dependencies": {
+    "@discordjs/builders": "^1.8.1",
+    "@discordjs/rest": "^2.3.0",
+    "@discordjs/voice": "^0.17.0",
     "axios": "^1.7.2",
     "canvas": "^2.11.2",
     "cheerio": "^1.0.0-rc.12",
+    "discord-api-types": "^0.37.85",
+    "discord-buttons": "^4.0.0-deprecated",
     "discord.js": "^14.15.2",
     "dotenv": "^16.4.5",
     "mathjs": "^12.4.2",
-    "plotly": "^1.0.6"
+    "node-schedule": "^2.1.1",
+    "plotly": "^1.0.6",
+    "ytdl-core": "^4.11.5"
   },
   "scripts": {
     "start": "app.js"
