@@ -26,7 +26,7 @@ git clone https://github.com/Orchid1038/DiscordPubBot.git
 2. 安裝依賴項:
 
 ```bash
-cd discord-bot
+cd DiscordPubBot
 npm install
 ```
 
