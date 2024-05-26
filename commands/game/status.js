@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require("discord.js");
-const { getCharacter } = require("../../utils/rpg/characters");
+const { getCharacter, getBackpack } = require("../../utils/rpg/characters");
 const moment = require("moment");
 
 module.exports = {
@@ -9,6 +9,7 @@ module.exports = {
   async execute(interaction) {
     const userId = interaction.user.id;
     const character = getCharacter(userId);
+    const backpack = getBackpack(userId);
 
     if (!character) {
       await interaction.reply(
@@ -25,17 +26,24 @@ module.exports = {
       character.artifact && character.artifact.name
         ? character.artifact.name
         : "無";
-    const potionsCount =
-      character.potions && Array.isArray(character.potions)
-        ? character.potions.length
-        : 0;
 
-    const itemsCount = character.items.reduce(
+    // 計算每種紅藥水的數量
+    const potionCounts = character.potions.reduce((counts, potion) => {
+      counts[potion.name] = (counts[potion.name] || 0) + 1;
+      return counts;
+    }, {});
+
+    const potionList =
+      Object.entries(potionCounts)
+        .map(([name, count]) => `${name} x${count}`)
+        .join(", ") || "無";
+
+    const itemsCount = backpack.items.reduce(
       (acc, item) => acc + item.quantity,
       0
     );
     const itemsList =
-      character.items
+      backpack.items
         .map((item) => `${item.name} x${item.quantity}`)
         .join(", ") || "無";
 
@@ -64,11 +72,10 @@ module.exports = {
 HP：${character.hp || 0}
 等級：${character.level || 1}
 經驗值：${character.experience || 0}
-紅藥水數量：${potionsCount}
+紅藥水：${potionList}
 武器：${weaponName}
 防具：${armorName}
 神器：${artifactName}
-金錢：${character.gold || 0}
 創建時間：${character.createdAt || "未知"}
 今日剩餘伐木次數：${remainingLoggingTimes}
 今日剩餘釣魚次數：${remainingFishingTimes}

@@ -1,50 +1,74 @@
 [
   {
-    "name": "史萊姆",
+    "name": "暖暖怪",
     "attack": 5,
     "defense": 3,
     "agility": 2,
     "hp": 20,
-    "exp": 5
+    "exp": 5,
+    "drops": [
+      { "item": "短劍", "type": "weapon", "probability": 0.1 },
+      { "item": "紅藥水", "type": "potion", "probability": 0.2 }
+    ]
   },
   {
-    "name": "哥布林",
+    "name": "暈船怪客",
     "attack": 7,
     "defense": 5,
     "agility": 4,
     "hp": 30,
-    "exp": 10
+    "exp": 10,
+    "drops": [
+      { "item": "長劍", "type": "weapon", "probability": 0.1 },
+      { "item": "紅藥水", "type": "potion", "probability": 0.2 }
+    ]
   },
   {
-    "name": "巨狼",
+    "name": "李國毅",
     "attack": 10,
     "defense": 8,
     "agility": 6,
     "hp": 50,
-    "exp": 20
+    "exp": 20,
+    "drops": [
+      { "item": "巨斧", "type": "weapon", "probability": 0.1 },
+      { "item": "紅藥水", "type": "potion", "probability": 0.2 }
+    ]
   },
   {
-    "name": "骷髏戰士",
+    "name": "勇猛的運土神通",
     "attack": 8,
     "defense": 6,
     "agility": 5,
     "hp": 40,
-    "exp": 15
+    "exp": 15,
+    "drops": [
+      { "item": "鎖甲", "type": "armor", "probability": 0.1 },
+      { "item": "紅藥水", "type": "potion", "probability": 0.2 }
+    ]
   },
   {
-    "name": "火焰精靈",
+    "name": "地雷系",
     "attack": 12,
     "defense": 4,
     "agility": 8,
     "hp": 35,
-    "exp": 25
+    "exp": 25,
+    "drops": [
+      { "item": "板甲", "type": "armor", "probability": 0.1 },
+      { "item": "紅藥水", "type": "potion", "probability": 0.2 }
+    ]
   },
   {
-    "name": "惡魔",
+    "name": "長髮男",
     "attack": 15,
     "defense": 10,
     "agility": 7,
     "hp": 60,
-    "exp": 30
+    "exp": 30,
+    "drops": [
+      { "item": "巨斧", "type": "weapon", "probability": 0.1 },
+      { "item": "紅藥水", "type": "potion", "probability": 0.2 }
+    ]
   }
 ]

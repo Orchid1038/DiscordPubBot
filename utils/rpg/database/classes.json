@@ -1,6 +1,6 @@
 [
   {
-    "name": "戰士",
+    "name": "小畫家",
     "attack": 10,
     "defense": 8,
     "agility": 5,
@@ -10,7 +10,7 @@
     "hpGrowth": 15
   },
   {
-    "name": "法師",
+    "name": "好楓寶",
     "attack": 12,
     "defense": 5,
     "agility": 7,
@@ -20,7 +20,7 @@
     "hpGrowth": 10
   },
   {
-    "name": "弓箭手",
+    "name": "劍純",
     "attack": 8,
     "defense": 6,
     "agility": 10,
@@ -30,7 +30,7 @@
     "hpGrowth": 12
   },
   {
-    "name": "盜賊",
+    "name": "長髮男",
     "attack": 9,
     "defense": 5,
     "agility": 12,
@@ -40,7 +40,7 @@
     "hpGrowth": 10
   },
   {
-    "name": "牧師",
+    "name": "地雷系女子",
     "attack": 7,
     "defense": 7,
     "agility": 6,
@@ -50,7 +50,7 @@
     "hpGrowth": 12
   },
   {
-    "name": "騎士",
+    "name": "黨團團員",
     "attack": 11,
     "defense": 10,
     "agility": 4,
@@ -60,7 +60,7 @@
     "hpGrowth": 15
   },
   {
-    "name": "戰鬥法師",
+    "name": "狗屎寫手",
     "attack": 10,
     "defense": 6,
     "agility": 6,
@@ -70,7 +70,7 @@
     "hpGrowth": 12
   },
   {
-    "name": "刺客",
+    "name": "帕姆",
     "attack": 12,
     "defense": 4,
     "agility": 11,
@@ -80,7 +80,7 @@
     "hpGrowth": 10
   },
   {
-    "name": "盾衛",
+    "name": "暈船仔",
     "attack": 6,
     "defense": 12,
     "agility": 5,
@@ -90,7 +90,7 @@
     "hpGrowth": 15
   },
   {
-    "name": "獵人",
+    "name": "全甲黑幫",
     "attack": 9,
     "defense": 7,
     "agility": 9,

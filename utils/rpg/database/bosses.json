@@ -1,38 +1,128 @@
 [
   {
-    "name": "炎魔",
+    "name": "闕崇林",
     "level": 50,
-    "description": "來自地獄的火焰魔鬼，擁有強大的火焰攻擊能力。",
-    "story": "炎魔是地獄的守護者，擁有無窮無盡的火焰力量。傳說中，只有最勇敢的冒險者才能挑戰並擊敗它。",
+    "description": "一名肥宅繪師，很會嘴砲。",
+    "story": "從小立志當美人魚，喜歡唱歌，鈴鼓之王",
     "attack": 100,
     "defense": 75,
     "agility": 40,
     "hp": 2500,
     "creatorId": "system",
-    "creatorName": "系統"
+    "creatorName": "系統",
+    "drops": [
+      {
+        "item": "巨斧",
+        "type": "weapon",
+        "probability": 0.1
+      },
+      {
+        "item": "紅藥水",
+        "type": "potion",
+        "probability": 0.2
+      },
+      {
+        "item": "鎖甲",
+        "type": "armor",
+        "probability": 0.1
+      },
+      {
+        "item": "神器",
+        "type": "artifact",
+        "probability": 0.05
+      }
+    ]
   },
   {
-    "name": "冰龍",
-    "level": 60,
-    "description": "冰雪之地的統治者，擁有強大的冰凍能力。",
-    "story": "冰龍是冰雪之地的統治者，擁有強大的冰凍能力。傳說中，只有最勇敢的冒險者才能挑戰並擊敗它。",
-    "attack": 120,
-    "defense": 80,
-    "agility": 50,
-    "hp": 3000,
+    "name": "李國毅",
+    "level": 45,
+    "description": "一名勇猛的戰士，擁有強大的力量。",
+    "story": "從小在戰場上長大，經歷過無數次戰鬥。",
+    "attack": 90,
+    "defense": 70,
+    "agility": 35,
+    "hp": 2300,
     "creatorId": "system",
-    "creatorName": "系統"
+    "creatorName": "系統",
+    "drops": [
+      {
+        "item": "長劍",
+        "type": "weapon",
+        "probability": 0.1
+      },
+      {
+        "item": "紅藥水",
+        "type": "potion",
+        "probability": 0.2
+      },
+      {
+        "item": "皮甲",
+        "type": "armor",
+        "probability": 0.1
+      },
+      {
+        "item": "神器",
+        "type": "artifact",
+        "probability": 0.05
+      }
+    ]
   },
   {
-    "name": "暗影之王",
-    "level": 70,
-    "description": "黑暗世界的統治者，擁有強大的暗影力量。",
-    "story": "暗影之王是黑暗世界的統治者，擁有強大的暗影力量。傳說中，只有最勇敢的冒險者才能挑戰並擊敗它。",
-    "attack": 140,
-    "defense": 90,
-    "agility": 60,
-    "hp": 3500,
+    "name": "勇猛的運土神通",
+    "level": 40,
+    "description": "一名擁有神奇力量的戰士。",
+    "story": "他的力量來自於神秘的古老儀式。",
+    "attack": 80,
+    "defense": 60,
+    "agility": 30,
+    "hp": 2000,
     "creatorId": "system",
-    "creatorName": "系統"
+    "creatorName": "系統",
+    "drops": [
+      {
+        "item": "短劍",
+        "type": "weapon",
+        "probability": 0.1
+      },
+      {
+        "item": "紅藥水",
+        "type": "potion",
+        "probability": 0.2
+      },
+      {
+        "item": "板甲",
+        "type": "armor",
+        "probability": 0.1
+      },
+      {
+        "item": "神器",
+        "type": "artifact",
+        "probability": 0.05
+      }
+    ]
+  },
+  {
+    "userId": "690898212189372416",
+    "userName": "jiubao.",
+    "name": "asd",
+    "level": 100,
+    "description": "asdasd",
+    "story": "asdasd",
+    "hp": 1000,
+    "attack": 200,
+    "defense": 150,
+    "agility": 120
+  },
+  {
+    "userId": "690898212189372416",
+    "userName": "jiubao.",
+    "name": "asd",
+    "level": 100,
+    "description": "asdasd",
+    "story": "asdasd",
+    "hp": 1000,
+    "attack": 200,
+    "defense": 150,
+    "agility": 120
   }
 ]

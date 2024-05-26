@@ -1,5 +1,128 @@
 [
-  { "name": "皮甲", "defense": 5 },
-  { "name": "鎖甲", "defense": 10 },
-  { "name": "板甲", "defense": 15 }
+  {
+    "name": "皮甲",
+    "defense": 5,
+    "description": "普通的皮甲，提供基本的防護。"
+  },
+  {
+    "name": "鎖甲",
+    "defense": 10,
+    "description": "由金屬環組成的鎖甲，提供中等防護。"
+  },
+  {
+    "name": "板甲",
+    "defense": 15,
+    "description": "重型板甲，提供高強度防護。"
+  },
+  { "name": "冥契法衣", "defense": 20, "description": "針神制靈鷲宮主法衣" },
+  { "name": "軟?寶甲", "defense": 25, "description": "桃花島至寶，刀槍不傷" },
+  { "name": "金絲背心", "defense": 30, "description": "鐵劍門至寶之金絲背心" },
+  {
+    "name": "烏蠶寶衣",
+    "defense": 35,
+    "description": "烏蠶絲和銀絲線合制寶衣"
+  },
+  { "name": "紫云戰衣", "defense": 40, "description": "飛天狐貍的披風" },
+  {
+    "name": "天蠶寶甲",
+    "defense": 45,
+    "description": "螯拜的寶衣，后歸韋小寶"
+  },
+  {
+    "name": "九龍云胄",
+    "defense": 50,
+    "description": "清朝大內秘藏之護心軟甲"
+  },
+  { "name": "錦斕袈裟", "defense": 55, "description": "佛門高僧常服之袈裟" },
+  { "name": "玄武道裝", "defense": 60, "description": "武當派至寶，玄武護持" },
+  { "name": "鱷神皮甲", "defense": 65, "description": "南海鱷神的皮甲" },
+  { "name": "玄烏羽衣", "defense": 70, "description": "萬千鷹羽綴制的披風" },
+  {
+    "name": "駝紋金胄",
+    "defense": 75,
+    "description": "西域國王桑拉巴的黃金甲"
+  },
+  { "name": "朧影織衣", "defense": 80, "description": "輕紗般絲制白衣" },
+  {
+    "name": "仙符法袍",
+    "defense": 85,
+    "description": "全真派至寶，附骷髏符道袍"
+  },
+  { "name": "肅霜寶裘", "defense": 90, "description": "黑貂皮制作的皮衣" },
+  { "name": "黑天魔鎧", "defense": 95, "description": "戰神鐵木真的鎧甲" },
+  {
+    "name": "星狼云鎧",
+    "defense": 100,
+    "description": "大漠神狼的皮革制成鎧甲"
+  },
+  { "name": "蛇紋鱗甲", "defense": 105, "description": "皮革輕甲上有蛇鱗花紋" },
+  {
+    "name": "圣靈披風",
+    "defense": 110,
+    "description": "相傳為女媧所傳，蘊藏力量"
+  },
+  { "name": "誅天皇鎧", "defense": 115, "description": "九色真珠絡制浮光錦絲" },
+  {
+    "name": "天瑞華綾",
+    "defense": 120,
+    "description": "舞動時華綾滿放，霞光輝蘊"
+  },
+  {
+    "name": "山河社稷袍",
+    "defense": 125,
+    "description": "繡了山河社稷圖的絳紅繡袍"
+  },
+  { "name": "七色蝶裳", "defense": 130, "description": "七色彩紋是女媧的象征" },
+  { "name": "繡金白袍", "defense": 135, "description": "白緞子金線繡花的長袍" },
+  { "name": "黃泉祭衣", "defense": 140, "description": "丁春秋的毒衣" },
+  { "name": "鳳凰織錦", "defense": 145, "description": "鳳凰浴火的神奇衣服" },
+  { "name": "霧幻云袍", "defense": 150, "description": "青龍吞云的道袍" },
+  { "name": "紫薇仙衣", "defense": 155, "description": "由紫英石煉成紫紗織制" },
+  { "name": "銀狐披肩", "defense": 160, "description": "銀狐毛制的披肩" },
+  { "name": "淺綠青衫", "defense": 165, "description": "淺綠色綢杉常服" },
+  { "name": "浮光錦裘", "defense": 170, "description": "錦緞鑲飾貂皮而成服飾" },
+  { "name": "舞風云裳", "defense": 175, "description": "靈鷲宮屬下的斗篷" },
+  { "name": "黑緞籠衫", "defense": 180, "description": "黑色的武人服裝" },
+  { "name": "紫練綢綾", "defense": 185, "description": "絳紫色綢綾，質地堅韌" },
+  { "name": "百結鶉衣", "defense": 190, "description": "丐幫弟子常見服飾" },
+  { "name": "羊皮長袍", "defense": 195, "description": "山羊皮制的袍子" },
+  { "name": "騶虞皮裘", "defense": 200, "description": "白虎皮制的寶衣" },
+  { "name": "冰月皇衣", "defense": 205, "description": "大理皇室世傳皇袍" },
+  { "name": "龍神天鎧", "defense": 210, "description": "戰神蕭峰所穿戰鎧" },
+  { "name": "珠璃瑩甲", "defense": 215, "description": "無崖子以千年寒玉所制" },
+  {
+    "name": "瑤池仙袖",
+    "defense": 220,
+    "description": "劍仙所穿衣物非凡鐵能傷"
+  },
+  { "name": "玉女云袖", "defense": 225, "description": "華山女子常服" },
+  { "name": "雪羽披風", "defense": 230, "description": "冰霜天女常服" },
+  { "name": "輕綢舞袖", "defense": 235, "description": "舞姬所穿的輕綢紗衣" },
+  {
+    "name": "玄羅輕袖",
+    "defense": 240,
+    "description": "舞袖蔽影使穿者身形飄忽"
+  },
+  {
+    "name": "綴玉華裳",
+    "defense": 245,
+    "description": "阿碧為其主人縫制的寶衣"
+  },
+  {
+    "name": "幽旛魂錦",
+    "defense": 250,
+    "description": "符咒魂旛縫制的外掛錦披"
+  },
+  {
+    "name": "火浣銀紗",
+    "defense": 255,
+    "description": "火浣紗織成衣，耐火堅韌"
+  },
+  { "name": "紫金玄鎧", "defense": 260, "description": "打磨極光似鏡的鎧甲" },
+  { "name": "鈞天瓏袖", "defense": 265, "description": "似飄渺云氣收攏成衣" },
+  {
+    "name": "雷絳紋帛",
+    "defense": 270,
+    "description": "以織紋集引雷煌咒力的異帛"
+  }
 ]

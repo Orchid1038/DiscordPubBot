@@ -8,6 +8,7 @@ const {
   equipArtifact,
 } = require("../../utils/rpg/characters");
 const { battleMonster } = require("../../utils/rpg/battle");
+const { getRandomPotion } = require("../../utils/rpg/items");
 
 module.exports = {
   metadata: new SlashCommandBuilder()
@@ -38,10 +39,7 @@ module.exports = {
             result.enemy.loot.potions &&
             result.enemy.loot.potions.length > 0
           ) {
-            const potion =
-              result.enemy.loot.potions[
-                Math.floor(Math.random() * result.enemy.loot.potions.length)
-              ];
+            const potion = getRandomPotion();
             addPotion(userId, potion);
             result.result += ` 並獲得了一瓶${potion.name}！`;
           }

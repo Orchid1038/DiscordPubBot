@@ -67,6 +67,30 @@ function getArtifactByName(name) {
   return artifacts.find((artifact) => artifact.name === name);
 }
 
+function getRandomWeapon() {
+  if (weapons.length === 0) {
+    throw new Error("無可用武器");
+  }
+  const randomIndex = Math.floor(Math.random() * weapons.length);
+  return weapons[randomIndex];
+}
+
+function getRandomArmor() {
+  if (armors.length === 0) {
+    throw new Error("無可用防具");
+  }
+  const randomIndex = Math.floor(Math.random() * armors.length);
+  return armors[randomIndex];
+}
+
+function getRandomPotion() {
+  if (potions.length === 0) {
+    throw new Error("無可用紅藥水");
+  }
+  const randomIndex = Math.floor(Math.random() * potions.length);
+  return potions[randomIndex];
+}
+
 // 初始化時加載所有數據
 loadWeapons();
 loadArmors();
@@ -82,4 +106,7 @@ module.exports = {
   getArmorByName,
   getPotionByName,
   getArtifactByName,
+  getRandomWeapon,
+  getRandomArmor,
+  getRandomPotion,
 };

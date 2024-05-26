@@ -3,11 +3,10 @@ const {
   addPotion,
   updateExperience,
   deleteCharacter,
-  equipWeapon,
-  equipArmor,
+  addItem,
 } = require("./characters");
 const { getRandomEnemy } = require("./enemies");
-const { getRandomWeapon, getRandomArmor } = require("./items");
+const { getRandomWeapon, getRandomArmor, getRandomPotion } = require("./items");
 
 function battle(userId, boss) {
   const character = getCharacter(userId);
@@ -70,8 +69,9 @@ function battle(userId, boss) {
     result = "勝利";
     if (Math.random() < 0.5) {
       // 50%的機率掉落紅藥水
-      addPotion(userId);
-      result += " 並獲得了一瓶紅藥水！";
+      const potion = getRandomPotion(); // 從JSON中隨機獲取紅藥水
+      addPotion(userId, potion);
+      result += ` 並獲得了一瓶${potion.name}！`;
     }
   } else {
     result = "失敗";
@@ -131,19 +131,24 @@ function battleMonster(userId) {
     updateExperience(userId, enemy.exp); // 根據小怪的經驗值更新角色經驗值
     if (Math.random() < 0.2) {
       // 20%的機率掉落紅藥水
-      addPotion(userId);
-      result += " 並獲得了一瓶紅藥水！";
+      const potion = getRandomPotion(); // 從JSON中隨機獲取紅藥水
+      addPotion(userId, potion);
+      result += ` 並獲得了一瓶${potion.name}！`;
     }
     if (Math.random() < 0.1) {
       // 10%的機率掉落武器
       const weapon = getRandomWeapon();
-      equipWeapon(userId, weapon);
+      weapon.type = "weapon"; // 確保物品類型正確
+      weapon.value = weapon.value || 0; // 確保物品價值存在
+      addItem(userId, weapon); // 添加到背包
       result += ` 並獲得了一把武器：${weapon.name}！`;
     }
     if (Math.random() < 0.1) {
       // 10%的機率掉落防具
       const armor = getRandomArmor();
-      equipArmor(userId, armor);
+      armor.type = "armor"; // 確保物品類型正確
+      armor.value = armor.value || 0; // 確保物品價值存在
+      addItem(userId, armor); // 添加到背包
       result += ` 並獲得了一件防具：${armor.name}！`;
     }
   } else {

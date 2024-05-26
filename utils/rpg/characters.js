@@ -5,7 +5,10 @@ const { getPotionByName } = require("./items");
 const moment = require("moment");
 
 const charactersFilePath = path.join(__dirname, "database", "characters.json");
+const backpacksFilePath = path.join(__dirname, "database", "backpacks.json");
+
 let characters = new Map();
+let backpacks = {};
 
 // 加載角色
 function loadCharacters() {
@@ -27,10 +30,33 @@ function loadCharacters() {
   }
 }
 
+// 加載背包
+function loadBackpacks() {
+  if (fs.existsSync(backpacksFilePath)) {
+    try {
+      const data = fs.readFileSync(backpacksFilePath, "utf-8");
+      if (data.trim()) {
+        backpacks = JSON.parse(data);
+      } else {
+        backpacks = {};
+      }
+    } catch (error) {
+      console.error("加載背包數據時發生錯誤：", error);
+      backpacks = {};
+    }
+  }
+}
+
 // 保存角色
 function saveCharacters() {
   const data = JSON.stringify(Array.from(characters.values()), null, 2);
   fs.writeFileSync(charactersFilePath, data, "utf-8");
+}
+
+// 保存背包
+function saveBackpacks() {
+  const data = JSON.stringify(backpacks, null, 2);
+  fs.writeFileSync(backpacksFilePath, data, "utf-8");
 }
 
 function createCharacter(userId, userName, serverId, serverName, className) {
@@ -74,7 +100,9 @@ function createCharacter(userId, userName, serverId, serverName, className) {
     fishingTimesToday: 0, // 今天的釣魚次數
   };
   characters.set(userId, character);
+  backpacks[userId] = { items: [] }; // 初始化背包
   saveCharacters();
+  saveBackpacks();
   return {
     success: true,
     message: `角色創建成功！你的職業是 ${className}`,
@@ -86,9 +114,15 @@ function getCharacter(userId) {
   return characters.get(userId);
 }
 
+function getBackpack(userId) {
+  return backpacks[userId] || { items: [] };
+}
+
 function deleteCharacter(userId) {
   characters.delete(userId);
+  delete backpacks[userId];
   saveCharacters();
+  saveBackpacks();
 }
 
 function updateExperience(userId, experience) {
@@ -143,91 +177,121 @@ function restCharacter(userId) {
   return { success: true, message: "你已經休息過了，體力和生命值已回滿。" };
 }
 
-function usePotion(userId) {
+function usePotion(userId, potionName) {
   const character = characters.get(userId);
   if (!character) {
-    throw new Error("角色不存在");
+    return { success: false, message: "角色不存在" };
   }
 
-  if (character.potions.length > 0) {
-    const potionName = character.potions.pop();
-    const potion = getPotionByName(potionName);
-    if (!potion) {
-      throw new Error("找不到對應的紅藥水");
-    }
-    character.hp = Math.min(100, character.hp + potion.hpRestore); // 回復HP
-    characters.set(userId, character);
-    saveCharacters();
-    return potion;
-  } else {
-    return null;
+  const potionIndex = character.potions.findIndex(
+    (potion) => potion.name === potionName
+  );
+  if (potionIndex === -1) {
+    return { success: false, message: `你沒有這種紅藥水：${potionName}` };
   }
+
+  const potion = character.potions.splice(potionIndex, 1)[0];
+  const potionData = getPotionByName(potion.name);
+  if (!potionData) {
+    return { success: false, message: "找不到對應的紅藥水" };
+  }
+
+  character.hp = Math.min(100, character.hp + potionData.hpRestore); // 回復HP
+  characters.set(userId, character);
+  saveCharacters();
+  return { success: true, data: potionData };
 }
 
 function addPotion(userId, potion) {
-  const character = characters.get(userId);
+  const character = getCharacter(userId);
   if (!character) {
     throw new Error("角色不存在");
   }
 
-  if (!potion || !potion.name) {
+  if (!potion || !potion.name || !potion.hpRestore) {
     throw new Error("無效的紅藥水");
   }
 
-  character.potions.push(potion.name);
+  character.potions.push(potion);
   characters.set(userId, character);
   saveCharacters();
 }
-
 function addItem(userId, item) {
-  const character = characters.get(userId);
-  if (!character) {
-    throw new Error("角色不存在");
-  }
+  const backpack = getBackpack(userId);
 
-  if (!character.items) {
-    character.items = [];
-  }
-
-  if (!item || !item.name || !item.type) {
+  if (!item || !item.name || !item.type || item.value === undefined) {
     throw new Error("無效的物品");
   }
 
-  const existingItem = character.items.find(
+  const existingItem = backpack.items.find(
     (i) => i.name === item.name && i.type === item.type
   );
   if (existingItem) {
     existingItem.quantity += item.quantity || 1;
   } else {
-    character.items.push({ ...item, quantity: item.quantity || 1 });
+    backpack.items.push({ ...item, quantity: item.quantity || 1 });
   }
-  characters.set(userId, character);
-  saveCharacters();
+  backpacks[userId] = backpack;
+  saveBackpacks();
 }
 
-function sellItem(userId, itemName) {
-  const character = characters.get(userId);
-  if (!character) {
-    throw new Error("角色不存在");
-  }
+function removeItem(userId, itemName, itemType) {
+  const backpack = getBackpack(userId);
 
-  const itemIndex = character.items.findIndex((item) => item.name === itemName);
+  const itemIndex = backpack.items.findIndex(
+    (i) => i.name === itemName && i.type === itemType
+  );
   if (itemIndex === -1) {
     throw new Error("找不到對應的物品");
   }
 
-  const item = character.items[itemIndex];
+  const item = backpack.items[itemIndex];
+  if (item.quantity > 1) {
+    item.quantity -= 1;
+  } else {
+    backpack.items.splice(itemIndex, 1);
+  }
+  backpacks[userId] = backpack;
+  saveBackpacks();
+}
+
+function sellItem(userId, itemName) {
+  const character = getCharacter(userId);
+  if (!character) {
+    throw new Error("角色不存在");
+  }
+
+  const backpack = getBackpack(userId);
+  const itemIndex = backpack.items.findIndex((item) => item.name === itemName);
+
+  if (itemIndex === -1) {
+    throw new Error("找不到對應的物品");
+  }
+
+  const item = backpack.items[itemIndex];
   character.gold += item.value;
-  character.items.splice(itemIndex, 1);
+
+  if (item.quantity > 1) {
+    item.quantity -= 1;
+  } else {
+    backpack.items.splice(itemIndex, 1);
+  }
+
+  backpacks[userId] = backpack;
   characters.set(userId, character);
+  saveBackpacks();
   saveCharacters();
   return item;
 }
 
 function equipWeapon(userId, weapon) {
-  const character = characters.get(userId);
+  const character = getCharacter(userId);
   if (!character) {
     throw new Error("角色不存在");
+  }
+
+  if (!weapon || !weapon.attack) {
+    throw new Error("無效的武器");
   }
 
   if (character.weapon) {
@@ -239,9 +303,8 @@ function equipWeapon(userId, weapon) {
   characters.set(userId, character);
   saveCharacters();
 }
-
 function equipArmor(userId, armor) {
-  const character = characters.get(userId);
+  const character = getCharacter(userId);
   if (!character) {
     throw new Error("角色不存在");
   }
@@ -257,7 +320,7 @@ function equipArmor(userId, armor) {
 }
 
 function equipArtifact(userId, artifact) {
-  const character = characters.get(userId);
+  const character = getCharacter(userId);
   if (!character) {
     throw new Error("角色不存在");
   }
@@ -276,12 +339,14 @@ function equipArtifact(userId, artifact) {
   saveCharacters();
 }
 
-// 初始化時加載角色
+// 初始化時加載角色和背包數據
 loadCharacters();
+loadBackpacks();
 
 module.exports = {
   createCharacter,
   getCharacter,
+  getBackpack,
   deleteCharacter,
   updateExperience,
   restCharacter,
@@ -292,4 +357,5 @@ module.exports = {
   equipWeapon,
   equipArmor,
   equipArtifact,
+  removeItem,
 };

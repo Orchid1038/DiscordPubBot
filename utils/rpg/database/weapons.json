@@ -1,5 +1,100 @@
 [
-  { "name": "短劍", "attack": 5 },
-  { "name": "長劍", "attack": 10 },
-  { "name": "巨斧", "attack": 15 }
+  { "name": "短劍", "attack": 5, "description": "短劍，適合近戰使用。" },
+  { "name": "長劍", "attack": 10, "description": "長劍，適合中距離戰鬥。" },
+  { "name": "巨斧", "attack": 15, "description": "巨斧，適合重型攻擊。" },
+  { "name": "綠玉仙竹", "attack": 20, "description": "春秋時越女劍仙的竹棒" },
+  { "name": "烏茲鋼刃", "attack": 25, "description": "波斯明教秘寶" },
+  { "name": "羅剎火槍", "attack": 30, "description": "羅剎國出品優質火槍" },
+  { "name": "碧玉打狗棒", "attack": 35, "description": "丐幫幫主信物" },
+  { "name": "乾坤錦繡針", "attack": 40, "description": "東方不敗以針為武器" },
+  { "name": "玄鐵劍", "attack": 45, "description": "玄鐵制成的重劍" },
+  { "name": "倚天劍", "attack": 50, "description": "倚天不出，誰與爭鋒" },
+  { "name": "屠龍刀", "attack": 55, "description": "武林至尊，寶刀屠龍" },
+  { "name": "鳳屏孔雀翎", "attack": 60, "description": "孔雀開屏，目眩神迷" },
+  { "name": "洞佩蝶戀花", "attack": 65, "description": "寒如冰雪、吹毛可斷" },
+  {
+    "name": "北霸銀鯊槍",
+    "attack": 70,
+    "description": "天降隕鐵，鏨金虎頭之槍"
+  },
+  { "name": "飛天玉虎爪", "attack": 75, "description": "尖針倒刺，虎爪長鉤" },
+  {
+    "name": "朱雀神焰扇",
+    "attack": 80,
+    "description": "朱雀翎羽為扇，焰及四方。"
+  },
+  { "name": "天蛇杖", "attack": 85, "description": "杖頭為劇毒活蛇的法杖" },
+  { "name": "割鹿刀", "attack": 90, "description": "刀呈淡青，殺人無血" },
+  {
+    "name": "紫金珊瑚杖",
+    "attack": 95,
+    "description": "靈蛇島異寶，東海紫金制"
+  },
+  {
+    "name": "毒龍銀鞭",
+    "attack": 100,
+    "description": "梅超風銀鞭，四丈內所向披靡"
+  },
+  { "name": "銀絲拂塵", "attack": 105, "description": "李莫愁的兵器,夾雜銀絲" },
+  { "name": "銀鉤鐵劃", "attack": 110, "description": "張翠山的奇門武器" },
+  { "name": "蝎尾鞭", "attack": 115, "description": "五毒教的兵器" },
+  {
+    "name": "千蛛銀絲",
+    "attack": 120,
+    "description": "南海千年神蛛結絲，刀劍難傷"
+  },
+  {
+    "name": "金鈴索帶",
+    "attack": 125,
+    "description": "古墓派異寶，小龍女的兵器"
+  },
+  {
+    "name": "鑌鐵判官筆",
+    "attack": 130,
+    "description": "紅梅山莊朱家的獨門兵器"
+  },
+  { "name": "降魔禪杖", "attack": 135, "description": "佛門高僧用外門兵刃" },
+  { "name": "輝耀金斧", "attack": 140, "description": "迷城之王桑拉巴的大斧" },
+  { "name": "神農鼎", "attack": 145, "description": "上古十大神器之一" },
+  { "name": "東皇鐘", "attack": 150, "description": "上古十大神器之一" },
+  { "name": "鑌鐵杖", "attack": 155, "description": "段延慶的奇門武器" },
+  { "name": "圣火令", "attack": 160, "description": "波斯明教的玄鐵令牌" },
+  { "name": "鉑絲掌套", "attack": 165, "description": "古墓至寶，鉑絲制成" },
+  { "name": "逍遙神仙環", "attack": 170, "description": "逍遙派掌門指環" },
+  { "name": "金蜈鉤", "attack": 175, "description": "五毒教主的奇門兵器" },
+  { "name": "毒針指環", "attack": 180, "description": "千手人屠彭連虎的利器" },
+  { "name": "君子劍", "attack": 185, "description": "劍身刻有“君子”二字" },
+  { "name": "淑女劍", "attack": 190, "description": "劍身刻有“淑女”二字" },
+  { "name": "金蛇劍", "attack": 195, "description": "五毒教的寶劍" },
+  { "name": "凝碧劍", "attack": 200, "description": "張召重的武器" },
+  {
+    "name": "紫薇軟劍",
+    "attack": 205,
+    "description": "劍刃柔軟，散發淡淡紫光"
+  },
+  { "name": "嵩陽鐵劍", "attack": 210, "description": "嵩山派雙手重鐵劍" },
+  { "name": "真武劍", "attack": 215, "description": "張三豐中年所用的神兵" },
+  { "name": "桃木古劍", "attack": 220, "description": "獨孤求敗晚年用劍" },
+  { "name": "白龍劍", "attack": 225, "description": "陸菲青的寶劍" },
+  { "name": "七星龍淵劍", "attack": 230, "description": "龍泉產上古名劍" },
+  { "name": "黑白雙劍", "attack": 235, "description": "玄素莊黑白雙劍的武器" },
+  { "name": "白虹劍", "attack": 240, "description": "殷天正的寶劍" },
+  { "name": "蒼狼天刃", "attack": 245, "description": "鐵木真的蘇魯錠" },
+  { "name": "九儀天尊", "attack": 250, "description": "武林盟主的權杖" },
+  { "name": "百戰寶刀", "attack": 255, "description": "項少龍打造之寶刀" },
+  { "name": "鋸齒鋼盾", "attack": 260, "description": "聚賢莊游氏兄弟的利器" },
+  {
+    "name": "黑狼鬼索",
+    "attack": 265,
+    "description": "黑色細長軟索，北海龍藤制"
+  },
+  { "name": "精鋼指套", "attack": 270, "description": "精鋼打造的指套" },
+  { "name": "乾坤一氣袋", "attack": 275, "description": "說不得的神奇布袋" },
+  { "name": "劍盾珠索", "attack": 280, "description": "陳家洛的奇門武器" },
+  { "name": "迷宮玉劍", "attack": 285, "description": "天山迷宮的玉制古劍" },
+  {
+    "name": "伏魔金杵",
+    "attack": 290,
+    "description": "四尺長，杵身金鑄的降魔杵"
+  }
 ]

@@ -1,0 +1,18 @@
+{
+  "690898212189372416": {
+    "items": [
+      {
+        "name": "竹子",
+        "type": "wood",
+        "value": 7,
+        "quantity": 1
+      },
+      {
+        "name": "杉木",
+        "type": "wood",
+        "value": 12,
+        "quantity": 1
+      }
+    ]
+  }
+}

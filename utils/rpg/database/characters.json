@@ -4,55 +4,31 @@
     "userName": "jiubao.",
     "serverId": "603157100583190558",
     "serverName": "桃花源",
-    "class": "騎士",
-    "attack": 11,
-    "defense": 10,
-    "agility": 4,
-    "stamina": 0,
+    "class": "戰士",
+    "attack": 10,
+    "defense": 8,
+    "agility": 5,
+    "stamina": 50,
     "maxStamina": 100,
     "hp": 100,
     "level": 1,
     "experience": 0,
     "attackGrowth": 3,
-    "defenseGrowth": 4,
+    "defenseGrowth": 3,
     "agilityGrowth": 1,
     "staminaGrowth": 1,
     "hpGrowth": 15,
     "potions": [],
-    "items": [
-      {
-        "name": "金魚",
-        "type": "fish",
-        "value": 20,
-        "quantity": 3
-      },
-      {
-        "name": "鯉魚",
-        "type": "fish",
-        "value": 10,
-        "quantity": 2
-      },
-      {
-        "name": "鮭魚",
-        "type": "fish",
-        "value": 30,
-        "quantity": 3
-      },
-      {
-        "name": "鯖魚",
-        "type": "fish",
-        "value": 15,
-        "quantity": 2
-      }
-    ],
-    "gold": 0,
+    "items": [],
+    "gold": 55,
     "weapon": null,
     "armor": null,
     "artifact": null,
-    "createdAt": "2024-05-25T22:34:32.982Z",
+    "createdAt": "2024-05-26T10:44:48.854Z",
     "lastLoggingTime": null,
     "lastWorkingTime": null,
     "lastFishingTime": null,
+    "lastRestTime": null,
     "loggingTimesToday": 0,
     "fishingTimesToday": 0
   }
