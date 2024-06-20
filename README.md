@@ -207,9 +207,6 @@ DiscordPubBot/
 - `!permutations 5 3`：計算 5 選 3 的排列數。
 - `!calculus`：進行微積分相關計算（具體使用方式需參考詳細指令說明）。
 
-## 貢獻
-
-歡迎任何形式的貢獻！請閱讀 [CONTRIBUTING.md](CONTRIBUTING.md) 了解更多詳情。
 
 ## 許可
 
